@@ -1,0 +1,33 @@
+{
+  "name": "discodheart",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Discord dice roller for Daggerheart",
+  "main": "app.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "register": "tsc && node dist/register.js",
+    "dev": "nodemon -e ts --watch 'src/*.ts' --exec 'tsc && node' dist/app.js"
+  },
+  "author": "Jere Luomajoki",
+  "license": "MIT",
+  "dependencies": {
+    "discord-api-types": "^0.38.21",
+    "discord-interactions": "^4.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

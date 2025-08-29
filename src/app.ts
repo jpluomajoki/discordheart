@@ -45,7 +45,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY!), async fu
       var advantageMod = 0
       var resultString = '';
       var advantageString = '';
-      options.map((opt: { name: string, type: ApplicationCommandOptionType, value: any }) => {
+      options?.map((opt: { name: string, type: ApplicationCommandOptionType, value: any }) => {
         switch (opt.name) {
           case ActionRollOptions.Modifier:
             modifier = Number.parseInt(opt.value)
